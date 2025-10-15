@@ -1,5 +1,14 @@
 "use client";
 
+import NextButton from "@/components/nextButton";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import FadeInSection from "@/lib/intersectionObserver";
 import Image from "next/image";
 
@@ -26,6 +35,19 @@ function skills() {
 
   return (
     <div className="flex flex-col items-center   ">
+      <Breadcrumb className="py-4 self-start">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Skills</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+
+
       <div className="w-full  ">
         <FadeInSection>
           <div className="bg-gray-300 w-full flex justify-center p-2 rounded-3xl">
@@ -87,7 +109,8 @@ function skills() {
       </div>
 
 
-     
+       <NextButton previous="My Projects" next="Contact"/>
+
     </div>
   );
 }

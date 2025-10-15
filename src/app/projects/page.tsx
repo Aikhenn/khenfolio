@@ -1,9 +1,19 @@
 "use client"
 
+
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DialogProject from "./dialogProj";
 import FadeInSection from "@/lib/intersectionObserver";
+import NextButton from "@/components/nextButton";
 
 
 const projectData = [
@@ -63,6 +73,19 @@ const projectData = [
 function Projects() {
     return (
         <div>
+
+            <Breadcrumb className="py-4">
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>Projects</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+
           <FadeInSection>
             <div className="bg-gray-300 w-full flex justify-center p-2 rounded-3xl">
                 <h1 className="font-extrabold text-3xl">PROJECTS</h1>
@@ -109,7 +132,8 @@ function Projects() {
               </FadeInSection>
                   </div>
               ))}
-            
+          <NextButton previous="About Me" next="My Skills"/>
+
         </div>
 
       );

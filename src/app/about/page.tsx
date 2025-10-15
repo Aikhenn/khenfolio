@@ -1,5 +1,7 @@
 "use client"
 
+import NextButton from "@/components/nextButton";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import FadeInSection from "@/lib/intersectionObserver";
@@ -11,6 +13,18 @@ export default function About() {
 
   return (
     <>
+   <Breadcrumb className="py-4">
+    <BreadcrumbList>
+        <BreadcrumbItem>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
+        </BreadcrumbItem>
+        <BreadcrumbSeparator/>
+        <BreadcrumbItem>
+        <BreadcrumbPage>About Me</BreadcrumbPage>
+        </BreadcrumbItem>
+    </BreadcrumbList>
+    </Breadcrumb>
+
     <FadeInSection>
       <div className="bg-gray-300 w-full flex justify-center p-2 rounded-3xl">
         <h1 className="font-extrabold text-3xl">ABOUT ME</h1>
@@ -18,7 +32,7 @@ export default function About() {
       </FadeInSection>
 
       <FadeInSection>
-      <div className="flex  py-8 gap-10 w-full justify-evenly h-full ">
+      <div className="flex  p-8  gap-10 w-full justify-evenly h-full ">
         <div className="h-full ">
           <Image
             src="/profile2.jpg"
@@ -39,7 +53,7 @@ export default function About() {
           <h4 className="text-xl  px-2 ">English</h4>
           <h4 className="text-xl px-2 ">Tagalog</h4>
 
-          <section className="p-2 mt-2 pb-30">
+          <section className="p-2 mt-2">
             <h3 className="text-2xl font-bold mb-4">Skills</h3>
 
             <h4>Web Development</h4>
@@ -83,7 +97,8 @@ export default function About() {
             to innovative, real-world solutions that make a difference.
           </p>
 
-          <Button className="w-fit">Download My CV</Button>
+          <Button className="w-fit"><a href="/docs/Resume_Patiño.pdf" download>Download My CV</a></Button>
+
 
           <section>
             <h3 className="text-2xl font-bold mb-2">My Experiences</h3>
@@ -173,7 +188,11 @@ export default function About() {
 
         
         </div>
+
+      
       </div>
+
+        <NextButton previous="Home" next="My Projects"/>
       </FadeInSection>
     </>
   );

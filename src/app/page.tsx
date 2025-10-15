@@ -28,17 +28,17 @@ const [index, setIndex] = useState(0);
   }, []);
 
   return (
-  <main className="flex-1 flex flex-col h-full w-full ">
+  <main className="flex-1 flex flex-col h-full w-full p-4 sm:p-6 md:p-10 ">
 
     {/* Large Gray Box */}
-    <div className="bg-[#dfdfdf] flex w-full justify-between flex-1 items-center rounded-4xl p-10 h-[75%]">
+      <div className="bg-[#dfdfdf] flex flex-col-reverse md:flex-row justify-between items-center rounded-4xl p-6 md:p-10 gap-8 md:gap-0">
       {/* Text Section */}
-      <div className="font-bold text-left flex flex-col">
+      <div className="font-bold flex flex-col  text-center md:text-left">
         <FadeInSection>
-          <h2 className="text-xl font-light ml-2">HI I AM</h2>
-          <h1 className="text-5xl">AIKHEN JOHN PATIÑO</h1>
+          <h2 className="text-md sm:text-lg md:text-xl  font-light ">HI I AM</h2>
+          <h1 className="text-3xl sm:text-4x; md:text-5xl">AIKHEN JOHN PATIÑO</h1>
           <h1
-            className={`text-8xl font-black text-[#343DE0] transition-all duration-500 transform ${
+            className={`text-5xl sm:text-6xl md:text-8xl font-black text-[#343DE0] transition-all duration-500 transform ${
               fade ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
             }`}
           >
