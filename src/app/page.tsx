@@ -79,7 +79,10 @@ const [index, setIndex] = useState(0);
         </div>
     </div>  
     </Link>
- 
+
+
+ <Link href="/projects">
+
     <div className="bg-[#343DE0] text-white w-[250px] h-[200px] rounded-4xl text-center flex flex-col items-center justify-center overflow-hidden shadow-md
        cursor-pointer transform transition duration-500 ease-in-out hover:scale-102 hover:shadow-lg hover:shadow-black/40 hover:bg-[#323ad1]"> 
       
@@ -90,7 +93,11 @@ const [index, setIndex] = useState(0);
           </div>
       
     </div>  
-  
+    </Link>
+
+
+ <Link href="/skills">
+
         <div className="bg-gray-100 w-[250px] h-[200px] mx-2 rounded-4xl text-center flex flex-col justify-center overflow-hidden shadow-md 
         cursor-pointer transform transition duration-500 ease-in-out hover:scale-102 hover:shadow-lg hover:shadow-black/40 hover:bg-gray-200">   
         
@@ -101,19 +108,25 @@ const [index, setIndex] = useState(0);
         </div>
       
     </div>  
+   </Link>
+
+
+ <Link href="/contact">
+
      <div className="bg-[#343DE0] text-white w-[250px] h-[200px] rounded-4xl text-center flex flex-col items-center justify-center overflow-hidden shadow-md
        cursor-pointer transform transition duration-500 ease-in-out hover:scale-102 hover:shadow-lg hover:shadow-black/40 hover:bg-[#323ad1]">
        
           <div className="text-center flex flex-col items-center p-6"> 
         <Icon icon="carbon:gem" width="50" height="50" color="white" />
-        <h3 className="font-black text-xl mt-2 ">Achievements</h3>
-        <p>all my awards and milestones</p>
+        <h3 className="font-black text-xl mt-2 ">Contact Me</h3>
+        <p>my contact information</p>
         </div>
-      
-    </div> 
-  </div>
-      </FadeInSection> 
+    </div>
 
+ </Link>
+ 
+  </div>
+    </FadeInSection> 
   
 </main>
   );

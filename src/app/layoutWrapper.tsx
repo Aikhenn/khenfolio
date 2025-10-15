@@ -13,7 +13,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       </div>
 
      <main
-        className={`flex-1 transition-all duration-300 p-10 ${
+        className={`flex-1 px-24 justify-center items-center h-full transition-all duration-300 p-10 ${
           isOpen ? "ml-64" : "ml-16"
         }`}
       >{children}</main>
