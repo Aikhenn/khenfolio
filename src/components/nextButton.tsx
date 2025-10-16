@@ -26,26 +26,40 @@ function NextButton({next, previous}: Props ) {
     }
   };
 
+
+
   return (
     <>
-      <div className="flex w-full gap-8 pb-12">
+      <div className="flex w-full gap-2 lg:gap-8 pb-6 xl:pb-12">
+
         <Link href={getLink(previous)} className="w-1/2">
           <div
             className="flex border-1 shadow-xl rounded-2xl hover:border-[#343DE0] hover:scale-105 hover:shadow-[#343DE0]/40 
-            transition-all duration-300 ease-in-out transform items-center gap-4 w-full h-full p-12"
+            transition-all duration-300 ease-in-out transform items-center gap-4 w-full h-full  p-4 xl:p-12"
           >
-            <Icon icon="material-symbols:arrow-back-rounded" width={50} />
-            <h2 className="font-bold text-5xl">{previous} </h2>
+                  <div className="w-8 sm:w-10 md:w-12 lg:w-16">
+          <Icon
+            icon="material-symbols:arrow-back-rounded"
+            className="w-full h-auto"
+          />
+        </div>
+
+            <h2 className="font-bold text-md lg:text-5xl">{previous} </h2>
           </div>
         </Link>
 
          <Link href={getLink(next)} className="w-1/2">
-          <div
+           <div
             className="flex border-1 shadow-xl rounded-2xl hover:border-[#343DE0] hover:scale-105 hover:shadow-[#343DE0]/40 
-            transition-all duration-300 ease-in-out transform items-center gap-4 w-full h-full p-12 justify-end"
+            transition-all duration-300 ease-in-out transform items-center gap-4 w-full h-full p-4 lg:p-12"
           >
-            <h2 className="font-bold text-5xl">{next} </h2>
-           <Icon icon="material-symbols:arrow-forward-rounded" width={50} />
+            <h2 className="font-bold text-md lg:text-5xl">{next} </h2>
+           <div className="w-8 sm:w-10 md:w-12 lg:w-16">
+          <Icon
+            icon="material-symbols:arrow-forward-rounded"
+            className="w-full h-auto"
+          />
+        </div>
 
           </div>
         </Link>

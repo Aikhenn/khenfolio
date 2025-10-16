@@ -1,6 +1,7 @@
 "use client";
 
 import NextButton from "@/components/nextButton";
+import ScrollIndicator from "@/components/scrollIndicator";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -58,9 +59,9 @@ function skills() {
 
       <div className="w-full  ">
         <FadeInSection>
-          <div className="w-full bg-[#343DE0] p-8 flex flex-col justify-center items-center my-4 rounded-2xl  py-12">
+          <div className="w-full bg-[#343DE0] p-3 lg:p-8 flex flex-col justify-center items-center my-4 rounded-2xl py-6  lg:py-12">
             <h1 className="text-white font-bold text-3xl">Developer</h1>
-            <h3 className="text-white">
+            <h3 className="text-white text-center p-2 ">
               skills and tech stacks I’ve used and have an experience with
             </h3>
           </div>
@@ -70,7 +71,7 @@ function skills() {
       <div className="w-full  max-w-[1080px]">
         <FadeInSection>
           <div className="font-bold">Front End</div>
-          <div className="w-full p-16 grid grid-cols-4 gap-8 items-stretch  justify-center border-2  max-w-[1080px]">
+          <div className="w-full p-2 lg:p-16 grid grid-cols-4 gap-8 items-stretch  justify-center  max-w-[1080px]">
             {skillImage.map((skill, index) => (
               <div
                 key={index}
@@ -81,9 +82,9 @@ function skills() {
                   alt={skill.name}
                   width={80}
                   height={80}
-                  className="object-contain"
+                  className="object-contain "
                 />
-                <h4 className="font-bold text-md">{skill.name}</h4>
+                <h4 className="lg:font-bold text-md">{skill.name}</h4>
               </div>
             ))}
           </div>
@@ -91,7 +92,7 @@ function skills() {
 
         <FadeInSection>
           <div className="font-bold">Back End</div>
-          <div className="w-full p-16 grid grid-cols-4 gap-8  justify-center border-2  max-w-[1080px]">
+          <div className="w-full  p-2 lg:p-16 grid grid-cols-4 gap-8  justify-center  max-w-[1080px]">
             {skillImage2.map((skill, index) => (
               <div key={index} className="flex flex-col items-center">
                 <Image
@@ -110,7 +111,7 @@ function skills() {
 
 
        <NextButton previous="My Projects" next="Contact"/>
-
+        <ScrollIndicator/>
     </div>
   );
 }

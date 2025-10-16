@@ -9,11 +9,11 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import DialogProject from "./dialogProj";
 import FadeInSection from "@/lib/intersectionObserver";
 import NextButton from "@/components/nextButton";
+import ScrollIndicator from "@/components/scrollIndicator";
 
 
 const projectData = [
@@ -97,13 +97,13 @@ function Projects() {
 
           
                 <FadeInSection>
-            <section 
+              <section 
                
-                className="flex gap-24 items-center justify-center w-full p-8 mt-10">
+                className="flex flex-col-reverse lg:flex-row gap-6 lg:gap-24 items-center justify-center w-full p-2 lg:p-8 mt-4 lg:mt-10 mb-8">
                  
                 <div className="flex flex-col gap-6 w-full">
-                    <h1 className="text-2xl font-bold ">{project.name}</h1>
-                    <p>{project.description}</p>
+                    <h1 className="text-sm lg:text-2xl font-bold text-justify ">{project.name}</h1>
+                    <p className="hidden md:flex text-justify text-sm">{project.description}</p>
 
                     <div>
                         <DialogProject 
@@ -121,7 +121,7 @@ function Projects() {
                         alt={project.name}
                         width={800}
                         height={400}
-                          className="w-[800px] h-[300px] object-cover rounded-lg"
+                          className="w-[360px] h-[200px] lg:w-[800px] lg:h-[300px] object-cover rounded-lg"
 
                     />
 
@@ -133,7 +133,7 @@ function Projects() {
                   </div>
               ))}
           <NextButton previous="About Me" next="My Skills"/>
-
+            <ScrollIndicator/>
         </div>
 
       );

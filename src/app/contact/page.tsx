@@ -15,6 +15,7 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import Link from "next/link";
 import NextButton from "@/components/nextButton";
 import { Button } from "@/components/ui/button";
+import ScrollIndicator from "@/components/scrollIndicator";
 
 export default function AboutPage() {
   const [name, setName] = useState("");
@@ -61,7 +62,7 @@ export default function AboutPage() {
           <h1 className="font-extrabold text-3xl">CONTACT ME</h1>
         </div>
       </FadeInSection>
-      <section className="flex justify-center pt-12 gap-2 w-full ">
+      <section className="flex flex-col xl:flex-row items-center justify-center pt-12 gap-2 w-full ">
         <FadeInSection>
           <div className="flex flex-wrap gap-8 justify-center">
             <div
@@ -174,6 +175,7 @@ export default function AboutPage() {
       </div>
       
 
+      <ScrollIndicator/>
 
     </div>
   );

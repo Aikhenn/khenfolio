@@ -7,15 +7,13 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex box-border p-10 w-screen h-screen gap-16">
-      <div className="fixed top-0 left-0 h-screen p-10">
+    <div className="flex flex-col lg:flex-row box-border w-screen h-screen">
+      <div className=" top-0 p-2 left-0 h-screen  ">
         <Header isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
 
      <main
-        className={`flex-1 px-24 justify-center items-center h-full transition-all duration-300  ${
-          isOpen ? "ml-64" : "ml-16"
-        }`}
+        className={`flex-1 p-4 lg:px-12  justify-center items-center h-full transition-all duration-300`}
       >{children}</main>
     </div>
   );

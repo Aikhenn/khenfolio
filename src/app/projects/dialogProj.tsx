@@ -22,14 +22,14 @@ function DialogProject({ title, techStack, features,desc }: DialogProjectProps) 
 
         <Dialog>
             <DialogTrigger><Button>View Details</Button></DialogTrigger>
-            <DialogContent className="!max-w-2xl w-full pr-14">
+            <DialogContent className="lg:!max-w-2xl w-full pt-10 lg:pt-6 lg:pr-14">
                 <DialogHeader>
                 <DialogTitle>{title}</DialogTitle>
                 <DialogDescription>
                   <p className="text-justify">{desc}</p>
                     <div className="mt-2 flex flex-col gap-2">
                       <h1 className="text-black font-bold">Tech Stack</h1>
-                      <div className=" flex flex-wrap gap-2"> 
+                      <div className=" flex flex-wrap justify-center lg:justify-start gap-2"> 
                         {techStack.map((tech, index)=>(
                           <Badge key={index}>{tech}</Badge>
 
@@ -41,7 +41,7 @@ function DialogProject({ title, techStack, features,desc }: DialogProjectProps) 
                       <h1 className="text-black font-bold">Key Features</h1>
                         <ul>
                           {features.map((feature, index) =>(
-                            <li className="list-disc ml-5 marker:text-blue-500" key={index}>{feature}</li>
+                            <li className="list-disc ml-5 text-left  marker:text-blue-500" key={index}>{feature}</li>
 
 
                           ))} 
