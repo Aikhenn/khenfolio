@@ -16,7 +16,7 @@ import Image from "next/image";
 function skills() {
   const skillImage = [
     { src: "/assets/html.png", name: "HTML" },
-    { src: "/assets/css.png", name: "CSS" },
+    { src: "/assets/CSS.png", name: "CSS" },
     { src: "/assets/javascript.png", name: "JavaScript" },
     { src: "/assets/react.png", name: "React" },
     { src: "/assets/tailwind.png", name: "Tailwind" },
